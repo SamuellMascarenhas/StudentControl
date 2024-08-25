@@ -1,0 +1,258 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+
+.formulario-container {
+    background-color: #0400ff;
+    background-image: url('../../img/background_form.svg');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-form {
+    display: flex;
+    padding: 20px;
+}
+
+.logo {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+li a,
+.btn_verAlunos {
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 10px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+}
+
+a:hover,
+.btn_adicionar:hover,
+.btn_verAlunos:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 2s infinite;
+    animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 #05bada66;
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+    }
+}
+
+.intro-form span {
+    font-weight: 700;
+    text-transform: uppercase;
+
+    color: #fff;
+    font-size: 25px;
+}
+
+.box-1 {
+    display: flex;
+    width: 70%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: #290f9123;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    padding: 50px;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.box-forms {
+    margin-top: 18px;
+    justify-content: center;
+    display: flex;
+    margin-left: 400px;
+}
+
+.box-forms form {
+    gap: 20px;
+}
+
+.inputs_labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.inputs_notas,
+.label_nome_aluno {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.box-forms input {
+    margin-top: 10px;
+    width: 100%;
+    height: 50px;
+    padding: 0 16px;
+    background: transparent;
+    border-radius: 4px;
+    border: 1px solid #cccccc6b;
+    color: #f9f9f9;
+}
+
+.box-forms label {
+    margin-top: 10px;
+    color: #ccc;
+    text-transform: uppercase;
+}
+
+.btn_adicionar {
+    margin-top: 30px;
+    cursor: pointer;
+    width: 100%;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+    border-radius: 10px;
+    background-size: 100% auto;
+    font-family: inherit;
+    font-size: 17px;
+    padding: 0.6em 1.5em;
+}
+
+.success-message {
+    margin-top: 15px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #4caf50;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.error-message {
+    margin-top: 15px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #f44336;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 1;
+}
+
+.form-footer {
+    color: #ccc;
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    width: 100%;
+}
+
+/* Modal */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    z-index: 1001;
+}
+
+.header_modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.aluno-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.aluno-table th,
+.aluno-table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.aluno-table th {
+    background-color: #f2f2f2;
+}
+
+.aluno-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}

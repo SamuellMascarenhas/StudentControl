@@ -1,0 +1,151 @@
+/* src/components/Dashboard.css */
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+
+}
+
+.dashboard-container {
+  background-image: url('../../img/background_dashboard.svg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-color: #3d83ff;
+
+}
+
+.header {
+  padding: 20px;
+}
+
+.title-dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.box-cards {
+  margin-top: 15px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.sub-titulo h2 {
+  font-weight: 100;
+  text-align: center;
+}
+
+.container_box_media {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  isolation: isolate;
+  position: relative;
+  text-align: center;
+
+  padding: 20px;
+  background: transparent;
+  border-radius: 1rem;
+  overflow: hidden;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+  --color: #32a6ff
+}
+
+.container_box_media:before {
+  position: absolute;
+  content: "";
+  inset: 0.0625rem;
+  border-radius: 0.9375rem;
+  background: #2eabff28;
+  z-index: 2
+}
+
+.container_box_media:after {
+  position: absolute;
+  content: "";
+  width: 0.25rem;
+  inset: 0.65rem auto 0.65rem 0.5rem;
+  border-radius: 0.125rem;
+  background: var(--gradient);
+  transition: transform 300ms ease;
+  z-index: 4;
+}
+
+.container_box_media:hover:after {
+  transform: translateX(0.15rem)
+}
+
+
+
+.box_media {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  font-weight: 300;
+  z-index: 999;
+}
+
+.box_media ul {
+  display: flex;
+  flex-direction: column;
+
+}
+
+li link {
+  display: flex;
+  align-items: center;
+}
+
+.box-frequencia {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  font-weight: 300;
+}
+
+.resumo-geral,
+.alunos {
+  color: #fff;
+  font-weight: 300;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.dashboard-footer {
+
+  color: #ccc;
+  text-align: center;
+
+
+
+}
